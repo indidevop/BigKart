@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 /* Hide scrollbar but keep scroll functionality */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -7,4 +8,20 @@
 .no-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.items{
+  list-style: none;
+  border-top: 1.5px solid rgba(49, 49, 49, 0.636);
+}
+
+.categories{
+  font-family: "Inter", sans-serif;
+}
+.categories h2{
+font-weight: bold;
+}
+
+.rights{
+  font-family: "Inter", sans-serif;
 }
