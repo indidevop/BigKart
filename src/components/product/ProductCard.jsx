@@ -1,14 +1,18 @@
-import React from 'react'
 
-const ProductCard = () => {
+
+const ProductCard = ({ name, desc, color, price, img, discount }) => {
     return (
-        <div className='product-card border w-[200px] flex flex-col'>
-            <img src="https://www.mydesignation.com/cdn/shop/files/tropical-shirt-303798.jpg?v=1742891498&width=1100" alt="" className=' object-cover' />
-            <div className="bottom-section flex flex-col p-2">
-                <h3 className='name'>Product Name</h3>
-                <p className="desc">Desc</p>
-                <p className="color">Green</p>
-                <span className="price">$0.00</span>
+
+        <div className="product-card border w-52 rounded-md overflow-hidden bg-white flex flex-col">
+            <div className="image-wrap w-full h-60 overflow-hidden">
+                <img src={img} alt={name} className="w-full h-full object-cover object-top" />
+            </div>
+            <div className="bottom-section flex flex-col p-2 h-35">
+                <h3 className='name font-bold'>{name}</h3>
+                <p className="desc">{desc}</p>
+                <p className="color">{color}</p>
+                <span className="price">₹{price}</span>
+                {discount > 0 && <span className="discount text-red-400 font-medium">{discount}% off</span>}
             </div>
         </div>
     )

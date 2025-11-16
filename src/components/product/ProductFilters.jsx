@@ -17,13 +17,6 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import ProductPage from '../pages/ProductPage'
 
-const sortOptions = [
-  { name: 'Most Popular', href: '#', current: true },
-  { name: 'Best Rating', href: '#', current: false },
-  { name: 'Newest', href: '#', current: false },
-  { name: 'Price: Low to High', href: '#', current: false },
-  { name: 'Price: High to Low', href: '#', current: false },
-]
 
 const filters = [
   {
@@ -36,18 +29,17 @@ const filters = [
       { value: 'brown', label: 'Brown', checked: false },
       { value: 'green', label: 'Green', checked: false },
       { value: 'purple', label: 'Purple', checked: false },
+      { value: 'red', label: 'Red', checked: false },
     ],
   },
   {
     id: 'size',
     name: 'Size',
     options: [
-      { value: '2l', label: '2L', checked: false },
-      { value: '6l', label: '6L', checked: false },
-      { value: '12l', label: '12L', checked: false },
-      { value: '18l', label: '18L', checked: false },
-      { value: '20l', label: '20L', checked: false },
-      { value: '40l', label: '40L', checked: false },
+      { value: 'S', label: 'S', checked: false },
+      { value: 'M', label: 'M', checked: false },
+      { value: 'L', label: 'L', checked: false },
+      { value: 'XXL', label: 'XXL', checked: false },
     ],
   },
 
@@ -59,10 +51,10 @@ const radioFilters = [
     id: 'price',
     name: 'Price',
     options: [
-      { value: '<=1000', label: '<=1000', checked: false },
-      { value: '1000 to 2000', label: '1000 to 2000', checked: false },
-      { value: '2000 to 5000', label: '2000 to 5000', checked: false },
-      { value: '>=5000', label: '>=5000', checked: false },
+      { value: '900', label: '<=1000', checked: false },
+      { value: '1500', label: '1000 to 2000', checked: false },
+      { value: '3000', label: '2000 to 5000', checked: false },
+      { value: '6000', label: '>=5000', checked: false },
 
     ],
   },
@@ -70,9 +62,9 @@ const radioFilters = [
     id: 'discount',
     name: 'Dicount',
     options: [
-      { value: '10%', label: '10%', checked: false },
-      { value: '20%', label: '20%', checked: false },
-      { value: 'Above 20%', label: 'Above 20%', checked: false },
+      { value: '10', label: '10%', checked: false },
+      { value: '20', label: '20%', checked: false },
+      { value: '30', label: 'Above 20%', checked: false },
 
     ],
   },
