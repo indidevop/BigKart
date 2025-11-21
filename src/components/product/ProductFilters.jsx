@@ -30,6 +30,7 @@ const filters = [
       { value: 'green', label: 'Green', checked: false },
       { value: 'purple', label: 'Purple', checked: false },
       { value: 'red', label: 'Red', checked: false },
+      { value: 'black', label: 'Black', checked: false },
     ],
   },
   {
@@ -439,7 +440,9 @@ export default function ProductFilters() {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3">{<ProductPage />}</div>
+              
+              <div className="lg:col-span-3">{<ProductPage selectedFilters={selectedFilters} 
+                  checkedFilters={checkedFilters} />}</div>
             </div>
           </section>
         </main>
